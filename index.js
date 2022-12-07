@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -6,7 +8,7 @@ const authRouter = require("./routes/auth");
 const connectDB = async () => {
   try {
     await mongoose.connect(
-      `mongodb+srv://doanhtuan52:1234@mern-uranus.ioefjfo.mongodb.net/?retryWrites=true&w=majority`,
+      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@mern-uranus.ioefjfo.mongodb.net/?retryWrites=true&w=majority`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
@@ -22,6 +24,7 @@ const connectDB = async () => {
 connectDB();
 
 const app = express();
+app.use(express.json());
 
 app.use("/api/auth", authRouter);
 

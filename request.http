@@ -1,1 +1,7 @@
-GET http://localhost:5000/api/auth
+POST  http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "username": "anhtuan",
+    "password": "1234"
+}
