@@ -15,7 +15,7 @@ router.post("/register", async (req, res) => {
   if (!username || !password)
     return res
       .status(400)
-      .json({ success: false, massage: "Missing username or password" });
+      .json({ success: false, message: "Missing username or password" });
 
   try {
     //check for existing user

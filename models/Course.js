@@ -14,7 +14,7 @@ const CourseSchema = new Schema({
   },
   status: {
     type: String,
-    enum: ["LEARNING", "LEARNED"],
+    enum: ["COMPLETED", "UPDATING"],
   },
   user: {
     type: Schema.Types.ObjectId,
@@ -22,4 +22,4 @@ const CourseSchema = new Schema({
   },
 });
 
-module.exports = mongoose.Schema("courses", CourseSchema);
+module.exports = mongoose.model("courses", CourseSchema);

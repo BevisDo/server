@@ -4,6 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 const authRouter = require("./routes/auth");
+const courseRouter = require("./routes/course");
 
 const connectDB = async () => {
   try {
@@ -27,6 +28,7 @@ const app = express();
 app.use(express.json());
 
 app.use("/api/auth", authRouter);
+app.use("/api/course", courseRouter);
 
 const PORT = 5000;
 
