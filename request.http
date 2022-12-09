@@ -5,3 +5,38 @@ Content-Type: application/json
     "username": "anhtuan",
     "password": "1234"
 }
+
+###
+
+POST  http://localhost:5000/api/course
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwYzhmMTQ2ZGRiM2E4YjcwNDczZGEiLCJpYXQiOjE2NzA2MDQyOTV9.KA_u1fBbxuL0x8MDnm6D4z5Fzsn0O_vt33QfijTKm0Y
+
+{
+    "title":"Course 2",
+    "description": "Test",
+    "url": "gg.com",
+    "status": "UPDATING"
+}
+
+###
+
+GET  http://localhost:5000/api/course
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwYzhmMTQ2ZGRiM2E4YjcwNDczZGEiLCJpYXQiOjE2NzA2MDQyOTV9.KA_u1fBbxuL0x8MDnm6D4z5Fzsn0O_vt33QfijTKm0Y
+
+###
+
+PUT  http://localhost:5000/api/course/639366be937badb41b77530c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwYzhmMTQ2ZGRiM2E4YjcwNDczZGEiLCJpYXQiOjE2NzA2MDQyOTV9.KA_u1fBbxuL0x8MDnm6D4z5Fzsn0O_vt33QfijTKm0Y
+
+{
+    "title":"Course 2-update",
+    "description": "Test",
+    "url": "gg.com",
+    "status": "COMPLETED"
+}
+
+###
+DELETE   http://localhost:5000/api/course/639366be937badb41b77530c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwYzhmMTQ2ZGRiM2E4YjcwNDczZGEiLCJpYXQiOjE2NzA2MDQyOTV9.KA_u1fBbxuL0x8MDnm6D4z5Fzsn0O_vt33QfijTKm0Y
